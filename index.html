@@ -1,1 +1,196 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26287484-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-26287484-5');
+    </script>
+  
+  <meta name="description" content="Daniel Canedo website."/>
+  <meta name="google-site-verification" content="SrpBuaIftZf014q5Qoc2sgT2pGarAGZclK99kuWOR4w">
+  <!--Here comes the open graph meta tags-->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://duhnnie.net"/>
+  <meta property="og:title" content="Daniel's Site"/>
+  <meta property="og:description" content="Daniel Canedo website."/>
+  <meta property="og:image:url" content="http://duhnnie.net/cover.jpg"/>
+  <meta property="og:image:width" content="1366"/>
+  <meta property="og:image:height" content="768"/>
+  <link rel="image_src" href="http://duhnnie.net/cover.jpg"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="mask-icon" href="safari-pinned-tab.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="Daniel's Site">
+  <meta name="application-name" content="Daniel's Site">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#00a29e">
+  <script>
+    // Polyfill
+    if (window.NodeList && !NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = Array.prototype.forEach;
+    }
+
+    Audio.prototype.play =  (function () {
+      const originalFn = Audio.prototype.play;
+
+      return function () {
+        let resp,
+          error;
+
+        try {
+          resp = originalFn.apply(this, arguments);
+        } catch (e) {
+          error = true;
+        }
+
+        if (resp && resp.catch) {
+          return resp;
+        } else {
+          return {
+            catch: function (fn) {
+              if (error) {
+                fn(error || {});
+              }
+            }
+          };
+        }
+      };
+    }) ();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+  <script src="https://w.soundcloud.com/player/api.js"></script>
+  <title>Daniel's Site</title>
+<link href="css/style.css?e8dd0d00c1cd7c48fb3d" rel="stylesheet"><link href="css/ipodjs.css?e8dd0d00c1cd7c48fb3d" rel="stylesheet"><script type="text/javascript" src="js/main.js?e8dd0d00c1cd7c48fb3d"></script></head>
+<body>
+  <div id="sun" class="sun_container sun_hidden">
+    <img class="sun_aura" src="../img/343c0be2c60c77f5a73a95f8c6f630ec.png"
+      srcset="
+        ../img/343c0be2c60c77f5a73a95f8c6f630ec.png 1249w,
+        ../img/7eb25febaff052288ed9c672d6210174.png 1875w,
+        ../img/b908b4e263400d1f228af6bffc8363f1.png 2500w,
+        ../img/7bd17c72d268d287f47a83f66b2acfb0.png 3125w,
+        ../img/032d5f1b2fed96f2f8978363540ab190.png 3750w"
+      sizes="
+        (max-width: 469px) 686px,
+        (max-height: 460px) 686px,
+        (max-width: 986px) 988px,
+        (max-height: 532px) 988px,
+        1249px"/>
+    <img class="sun_center" src="../img/8fcb5dd933a788c025d7a46a1ff738f6.png"
+      srcset="
+        ../img/8fcb5dd933a788c025d7a46a1ff738f6.png 364w,
+        ../img/c804e8993138d642ddc34e7594ba4634.png 547w,
+        ../img/a75cf130bcc416f2187981576c3ecb4d.png 729w,
+        ../img/d657cfef0e50dabdd3a75ca8a11b409d.png 911w,
+        ../img/6a6d9e32f54a9c8dd238ec88dd5037e3.png 1093w"
+      sizes="
+        (max-width: 469px) 200px,
+        (max-height: 460px) 200px,
+        (max-width: 986px) 288px,
+        (max-height: 532px) 288px,
+        364px"/>
+  </div>
+
+  <div id="clouds_layer" class="clouds_container clouds_hidden"></div>
+
+  <img id="guy" class="guy_content guy_hidden" src="../img/5df3bcf1fb6d5e78b416bb4e96526630.png"
+    srcset="
+      ../img/5df3bcf1fb6d5e78b416bb4e96526630.png 548w,
+      ../img/c9856004f817ea5bbc786cb34202e73d.png 823w,
+      ../img/8b38431609629b0dd96e1f825c85455f.png 1097w,
+      ../img/7260bd68acc3874dcb72ff89ef37c3a8.png 1371w,
+      ../img/2d0aa14d2c160d2355c078a16862c8d6.png 1645w"
+      sizes="50vw"/>
+
+  <nav id="menu" class="menu_container menu_hidden transition_default" role="navigation">
+    <a href="#" id="menu_noise" class="menu_item transition_default" title="noise">
+      <img src="../img/215e65ad330951888b358df06a62c07a.png"
+        srcset="
+          ../img/215e65ad330951888b358df06a62c07a.png 130w,
+          ../img/ba5fa7cbea9a0719b4b00bd534c3eced.png 195w,
+          ../img/e7de5662e600fdfef4277d733a03cb05.png 260w,
+          ../img/53889e0d6c29bc653aacaccda1dfab08.png 325w,
+          ../img/15b05a6c462642bf4710ad3f5688c326.png 390w"
+          alt="noise"/>
+    </a>
+    <a href="#" id="menu_ipod" class="menu_item transition_default" title="iPod">
+      <img src="../img/14ac9830f8aaec837615ee6aeff55b0a.png"
+        srcset="
+          ../img/14ac9830f8aaec837615ee6aeff55b0a.png 130w,
+          ../img/372852b5278536b98a043216dd923312.png 195w,
+          ../img/f5490e25c9cc28658d157688dccfa525.png 260w,
+          ../img/5f64294db2fcafe0f00c7570226b58f8.png 325w,
+          ../img/6d4bb6a82da7b7784b8450cf73397829.png 390w"
+          alt="iPod"/>
+    </a>
+    <a href="#" id="menu_camera" class="menu_item transition_default" title="camera">
+      <img src="../img/854e3732a53312c29e1e497694af0bb6.png"
+        srcset="
+          ../img/854e3732a53312c29e1e497694af0bb6.png 130w,
+          ../img/885fbe969d67e2f43a462a59ccdbdf7e.png 195w,
+          ../img/0ae55f3fcc6c12c6c954c8a1924c07cb.png 260w,
+          ../img/d26839a8a094d0a4e4acdbab22527737.png 325w,
+          ../img/d9cf45799701a718b9836eeae7102ecc.png 390w"
+          alt="camera"/>
+    </a>
+    <a href="http://blog.duhnnie.net" id="menu_blog" class="menu_item transition_default" title="blog" target="_blank">
+      <img src="../img/fbc524c3712f4cffdcf80dd951bb12ee.png"
+        srcset="
+          ../img/fbc524c3712f4cffdcf80dd951bb12ee.png 130w,
+          ../img/d978db9178115eb292f3482892911966.png 195w,
+          ../img/89be4f02e9e3a598c3aa98e22bcceee0.png 260w,
+          ../img/c21b50de0715e9cdd9e415edf82b2a00.png 325w,
+          ../img/c76a99e518ae705f533ed36ce4545180.png 390w"
+          alt="blog"/>
+    </a>
+    <a href="#" id="menu_links" class="menu_item transition_default" title="links">
+      <img src="../img/cbeb7de95ad04a76d3e17954fefe1da6.png"
+        srcset="
+          ../img/cbeb7de95ad04a76d3e17954fefe1da6.png 130w,
+          ../img/1aec8f1e21b720ca2c41ce58722e241a.png 195w,
+          ../img/6f5a0d568aac9b20baf693c611eaca46.png 260w,
+          ../img/6e1ccc2aa79d39d61a5fa049c7d17a10.png 325w,
+          ../img/34fa2ecb45ae3c45696bbe179c25ad60.png 390w"
+          alt="links"/>
+    </a>
+    <a href="#" id="menu_contact" class="menu_item transition_default" title="Contact">
+      <img src="../img/dcb0cc4842e53b08aa0ae99023065271.png"
+        srcset="
+          ../img/dcb0cc4842e53b08aa0ae99023065271.png 130w,
+          ../img/469e70f208ee0064f0ed2071eb6cabfc.png 195w,
+          ../img/c97b0f86e9acfbae9377793c8fb8ba40.png 260w,
+          ../img/5768432f97a8886488aa7171e79e35c0.png 325w,
+          ../img/e242fd4364dcdb47c6dbd1c5c3fcd586.png 390w"
+          alt="contact"/>
+    </a>
+    <a href="#" id="menu_aboutme" class="menu_item transition_default" title="About Me">
+      <img src="../img/b478dcf2d114ae05110cff2170996063.png"
+        srcset="
+          ../img/b478dcf2d114ae05110cff2170996063.png 130w,
+          ../img/af1c7bc38925a8cfd38abe86b3645d9b.png 195w,
+          ../img/57a963c56595da82d0297aa5e0488e30.png 260w,
+          ../img/1552bad425585b08286850a4aaa85803.png 325w,
+          ../img/4bb850ec68043e734896ca4ce4248a25.png 390w"
+        alt="about me"/>
+    </a>
+  </nav>
+  <div id="loader-container" class="loader_container">
+    <div id="main-loader" class="loader_bar">
+      <div></div>
+    </div>
+  </div>
+</body>
+</html>
